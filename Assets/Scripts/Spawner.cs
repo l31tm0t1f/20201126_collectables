@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
     {
         int index1 = isRandomized ? Random.Range(0, objectToSpawn.Count) : 0;
         Instantiate(objectToSpawn[index1], new Vector3(1f, -6f, 0f), transform.rotation);
-        //string itemType = GameObject.GetComponent<GameObject>(index1).itemType;
+        string itemType = GameObject.GetComponent<GameObject>[index1].itemType;
         // coinValuesAll.Add(objectToSpawn.itemType);
         int index2 = isRandomized ? Random.Range(0, objectToSpawn.Count) : 0;
         Instantiate(objectToSpawn[index2], new Vector3(4.8f, -5.2f, 0f), transform.rotation);
