@@ -4,11 +4,56 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform Player;
+    [SerializeField]
+    GameObject Player;
 
-    private void Update()
+    [SerializeField]
+    float timeOffset;
+
+    [SerializeField]
+    Vector2 posOffset;
+
+    [SerializeField]
+    float leftLimit;
+
+    [SerializeField]
+    float rightLimit;
+
+    [SerializeField]
+    float bottomLimit;
+
+    [SerializeField]
+    float topLimit;
+
+    private Vector3 velocity;
+
+    void Start()
     {
-        transform.position = new Vector3(Player.position.x, Player.position.y, transform.position.z);
+
+    }
+
+    void Update()
+    {
+        //camera current pos
+        Vector3 startPos = transform.position;
+
+        //Players current position
+        Vector3 endPos = Player.transform.position;
+        endPos.x += posOffset.x;
+        endPos.y += posOffset.y;
+        endPos.z = -10;
+
+
+        //transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);
+
+        transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);
+
+        transform.position = new Vector3
+        (
+        Mathf.Clamp(transform.position.x, leftLimit, rightLimit),
+        Mathf.Clamp(transform.position.y, bottomLimit, topLimit),
+        transform.position.z
+    );
     }
 }
 
