@@ -61,7 +61,7 @@ public class Spawner : MonoBehaviour
 
         coinValueList.Clear();
         print("SummaSumma on " + SummaSumma);
-
+        //ScoreScript.SummaScore = SummaSumma.ToString();
 
     }
 }

@@ -6,8 +6,7 @@ using UnityEngine.UI;
 public class ScoreScript : MonoBehaviour
 
 {
-    public int SummaSumma;
-    public static int scoreValue;
+    public static int SummaScore;
     Text score;
 
     // Start is called before the first frame update
@@ -19,6 +18,6 @@ public class ScoreScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        score.text = (SummaSumma.ToString());
+        //score.text = SummaScore;
     }
 }
