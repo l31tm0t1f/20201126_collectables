@@ -50,19 +50,13 @@ public class Spawner : MonoBehaviour
             print("Järjekorras nr: " + rNumber);
             print("Väärtus: " + rValue);
             print("Listis numrbeid kokku: " + coinValueList.Count);
-            r1Number = rNumber - 1;
-            coinValueList.Remove(r1Number);
+            r1Number = rNumber;
+            coinValueList.Remove[rValue];
             coinValueList.TrimExcess();
+            print("Listis numrbeid kokku: " + coinValueList.Count);
 
         }
 
-
-
-
         coinValueList.Clear();
-
-            //Destroy(objectToSpawn[index1]);
-
-       
     }
 }
