@@ -11,6 +11,7 @@ public class SpawnerTrigger : MonoBehaviour
         if (other.gameObject.CompareTag("Player"));
         {
             spawner.SpawnObject();
+
         }
     }
 

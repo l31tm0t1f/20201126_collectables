@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
             summa = summa + value;
             print("Summa on " + summa);
             inventory.Add(itemType);
-            print("Arve kokku: " + inventory.Count);
+            // print("Arve kokku: " + inventory.Count);
             Destroy(collision.gameObject);
 
         }
