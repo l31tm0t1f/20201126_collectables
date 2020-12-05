@@ -5,7 +5,6 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public List<GameObject> objectToSpawn = new List<GameObject>();
-    public List<string> coinValuesAll;
     public int coinValue;
     public bool isRandomized;
     private List<int> coinValueList;
@@ -61,7 +60,7 @@ public class Spawner : MonoBehaviour
 
         coinValueList.Clear();
         print("SummaSumma on " + SummaSumma);
-        ScoreScript.SummaScore = SummaSumma.ToString();
+        ScoreScript.SummaScore = SummaSumma;
 
     }
 }

@@ -4,27 +4,13 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField]
-    GameObject Player;
-
-    [SerializeField]
-    float timeOffset;
-
-    [SerializeField]
-    Vector2 posOffset;
-
-    [SerializeField]
-    float leftLimit;
-
-    [SerializeField]
-    float rightLimit;
-
-    [SerializeField]
-    float bottomLimit;
-
-    [SerializeField]
-    float topLimit;
-
+    [SerializeField] GameObject Player;
+    [SerializeField] float timeOffset;
+    [SerializeField] Vector2 posOffset; // is not used
+    [SerializeField] float leftLimit;
+    [SerializeField] float rightLimit;
+    [SerializeField] float bottomLimit;
+    [SerializeField] float topLimit;
     private Vector3 velocity;
 
     void Start()
