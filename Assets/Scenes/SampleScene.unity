@@ -90122,7 +90122,7 @@ MonoBehaviour:
   posOffset: {x: 5, y: 4}
   leftLimit: -4.19
   rightLimit: 100
-  bottomLimit: -12
+  bottomLimit: -14
   topLimit: 0
 --- !u!81 &2050289580
 AudioListener:

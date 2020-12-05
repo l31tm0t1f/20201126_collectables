@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
     private List<int> coinValueList;
     private List<int> coinValueList2;
     private int rNumber;
+    private int r1Number;
     private int rValue;
 
     // public GameObject objectsToSpawn;
@@ -48,7 +49,9 @@ public class Spawner : MonoBehaviour
             rValue = coinValueList[rNumber];
             print("Järjekorras nr: " + rNumber);
             print("Väärtus: " + rValue);
-            coinValueList.Remove(rNumber);
+            print("Listis numrbeid kokku: " + coinValueList.Count);
+            r1Number = rNumber - 1;
+            coinValueList.Remove(r1Number);
             coinValueList.TrimExcess();
 
         }
