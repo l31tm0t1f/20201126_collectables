@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class PlayerController : MonoBehaviour
@@ -19,13 +20,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 10f;
     // [SerializeField] private float hurtForce = 10f;
-    private int summa = 0;
+    private int ScoreCollected = 0;
     private int value;
-
+    //public Text ScoreText;                // Winning announcement
+    public Text Text_Win;
+    public Text Text_Lost;
 
     private void Start()
     {
         inventory = new List<string>();
+        //Text_Win.text = " ";
+        //Text_Lost.text = " ";
+
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -99,7 +105,6 @@ public class PlayerController : MonoBehaviour
             state = State.Idle;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -110,12 +115,22 @@ public class PlayerController : MonoBehaviour
             print("We have collected a: " + itemType);
             int.TryParse(itemType, out value);
 
-            summa = summa + value;
-            print("Summa on " + summa);
+            ScoreCollected = ScoreCollected + value;
+            print("Summa on " + ScoreCollected);
             inventory.Add(itemType);
             // print("Arve kokku: " + inventory.Count);
             Destroy(collision.gameObject);
+            if (ScoreCollected == ScoreScript.SummaScore)
+            {
+                Text_Win.text = "You Won";
+                Time.timeScale = 0;                             // Will stop the game
 
+            }
+            else if (ScoreCollected >= ScoreScript.SummaScore)
+            {
+                Text_Lost.text = "Try Again";
+                Time.timeScale = 0;                             // Will stop the game
+            }
         }
     }
 

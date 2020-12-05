@@ -1,24 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
     public List<GameObject> objectToSpawn = new List<GameObject>();
-    public int coinValue;
-    public bool isRandomized;
-    private List<int> coinValueList;
-    private int rNumber;
-    private int r1Number;
-    private int rValue;
-    public int SummaSumma;
+    public int coinValue;               // Value of the COin
+    public bool isRandomized;           // Random No
+    private List<int> coinValueList;    // List of spawn cCoin Values
+    private int rNumber;                // collected coin position in the coinValueList
+    private int r1Number;               // collected coin position in the coinValueList + 1
+    private int rValue;                 // COllected coin value
+    public int SummaSumma;              // collected Coin Values
 
-    // public GameObject objectsToSpawn;
+
 
     public void SpawnObject()
     {
         int index1 = isRandomized ? Random.Range(0, objectToSpawn.Count) : 0;
-        Instantiate(objectToSpawn[index1], new Vector3(1f, -6f, 0f), transform.rotation);
+        Instantiate(objectToSpawn[index1], new Vector3(0.5f, -2f, 0f), transform.rotation);
         coinValue = int.Parse(objectToSpawn[index1].GetComponent<CollectScript>().itemType);
         print("CoinValue on " + coinValue);
         coinValueList.Add(coinValue);
