@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
         print("CoinValue on " + coinValue);
         coinValueList.Add(coinValue);
 
-        // SummaSumma = 0;
+        SummaSumma = 0;
 
         for (int i = 0; i < 2; i++)
         {
@@ -61,7 +61,7 @@ public class Spawner : MonoBehaviour
 
         coinValueList.Clear();
         print("SummaSumma on " + SummaSumma);
-        //ScoreScript.SummaScore = SummaSumma.ToString();
+        ScoreScript.SummaScore = SummaSumma.ToString();
 
     }
 }

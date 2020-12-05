@@ -7,17 +7,18 @@ public class ScoreScript : MonoBehaviour
 
 {
     public static int SummaScore;
-    Text score;
+    private Text score;
 
     // Start is called before the first frame update
     void Start()
     {
         score = GetComponent<Text>();
+        SummaScore = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //score.text = SummaScore;
+        score.text = SummaScore;
     }
 }
