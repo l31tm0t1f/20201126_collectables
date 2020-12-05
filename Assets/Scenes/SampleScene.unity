@@ -13823,12 +13823,6 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
---- !u!4 &295127659 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2966011053876783582, guid: f341a9b0a794add4b9bde74bc4f84a37,
-    type: 3}
-  m_PrefabInstance: {fileID: 2966011054169154485}
-  m_PrefabAsset: {fileID: 0}
 --- !u!213 &299049433
 Sprite:
   m_ObjectHideFlags: 0
@@ -57844,6 +57838,12 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 3
   m_ColliderType: 1
+--- !u!1 &1386779241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2966011053876783568, guid: f341a9b0a794add4b9bde74bc4f84a37,
+    type: 3}
+  m_PrefabInstance: {fileID: 2966011054169154485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1386813344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90238,7 +90238,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994f88c13a72d534f9352eb3aa557e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 295127659}
+  Player: {fileID: 1386779241}
+  timeOffset: 0
+  posOffset: {x: 0, y: 0}
+  leftLimit: -4.19
+  rightLimit: 100
+  bottomLimit: 3.18
+  topLimit: 0
 --- !u!81 &2050289580
 AudioListener:
   m_ObjectHideFlags: 0
