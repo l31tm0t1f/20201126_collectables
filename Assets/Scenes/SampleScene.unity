@@ -90119,7 +90119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 1386779241}
   timeOffset: 0
-  posOffset: {x: 0, y: 0}
+  posOffset: {x: 5, y: 4}
   leftLimit: -4.19
   rightLimit: 100
   bottomLimit: -14
