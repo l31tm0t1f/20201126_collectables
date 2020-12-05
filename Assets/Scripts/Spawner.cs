@@ -51,7 +51,7 @@ public class Spawner : MonoBehaviour
             print("Väärtus: " + rValue);
             print("Listis numrbeid kokku: " + coinValueList.Count);
             r1Number = rNumber;
-            coinValueList.Remove[rValue];
+            coinValueList.Remove(rNumber);
             coinValueList.TrimExcess();
             print("Listis numrbeid kokku: " + coinValueList.Count);
 
