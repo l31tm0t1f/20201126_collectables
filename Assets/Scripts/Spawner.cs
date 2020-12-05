@@ -8,12 +8,11 @@ public class Spawner : MonoBehaviour
     public List<string> coinValuesAll;
     public int coinValue;
     public bool isRandomized;
-    public int[] coinValuesArray;
     private List<int> coinValueList;
-    private List<int> coinValueList2;
     private int rNumber;
     private int r1Number;
     private int rValue;
+    public int SummaSumma;
 
     // public GameObject objectsToSpawn;
 
@@ -43,20 +42,26 @@ public class Spawner : MonoBehaviour
         print("CoinValue on " + coinValue);
         coinValueList.Add(coinValue);
 
+        // SummaSumma = 0;
+
         for (int i = 0; i < 2; i++)
         {
             rNumber = Random.Range(0, coinValueList.Count);
             rValue = coinValueList[rNumber];
             print("Järjekorras nr: " + rNumber);
             print("Väärtus: " + rValue);
-            print("Listis numrbeid kokku: " + coinValueList.Count);
-            r1Number = rNumber;
-            coinValueList.Remove(rNumber);
+            SummaSumma = SummaSumma + rValue;
+            print("Listis numbreid kokku: " + coinValueList.Count);
+            r1Number = rNumber + 1;
+            coinValueList.Remove(r1Number);
             coinValueList.TrimExcess();
-            print("Listis numrbeid kokku: " + coinValueList.Count);
+            print("Listis numbreid kokku: " + coinValueList.Count);
 
         }
 
         coinValueList.Clear();
+        print("SummaSumma on " + SummaSumma);
+
+
     }
 }
