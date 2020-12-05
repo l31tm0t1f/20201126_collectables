@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
         print("CoinValue on " + coinValue);
         coinValueList.Add(coinValue);
 
-        for (int i = 0; i < coinValueList.Count - 1; i++)
+        for (int i = 0; i < 2; i++)
         {
             rNumber = Random.Range(0, coinValueList.Count);
             rValue = coinValueList[rNumber];
