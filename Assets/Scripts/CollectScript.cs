@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class CollectScript : MonoBehaviour
 {
-    public string itemType;
+    public string itemType;     // defines the itemType
 }

@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
     {
         // this part can be done better probably, especially if we want to have way more coins
         // but right now we spawn only 4 coins
-        int index1 = isRandomized ? Random.Range(0, objectToSpawn.Count) : 0;                   // coints the elements (coin) in the list and takes random one
+        int index1 = isRandomized ? Random.Range(0, objectToSpawn.Count) : 0;                   // coins the elements (coin) in the list and takes random one
         Instantiate(objectToSpawn[index1], new Vector3(0.5f, -2f, 0f), transform.rotation);     // will spawn the coin from the lsit (according to index No) to the certain place
         coinValue = int.Parse(objectToSpawn[index1].GetComponent<CollectScript>().itemType);    // takes the parameter from spawned object (itemType which reflects the coin value) and attributes it to "coinValue"
         // print("CoinValue on " + coinValue);                                                  // just to check if everything is ok
