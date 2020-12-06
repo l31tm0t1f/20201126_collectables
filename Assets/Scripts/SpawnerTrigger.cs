@@ -12,17 +12,16 @@ public class SpawnerTrigger : MonoBehaviour
         if (HasSpawned = false && other.gameObject.CompareTag("Player")) ;
         {
             spawner.SpawnObject();
-            HasSpawned = true;
+            HasSpawned = true;  //doesn't work
 
         }
     }
-    void OnTriggerExit(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player")) ;
-        {
-            HasSpawned = true;
-        }
 
+    //void OnTriggerExit(Collider2D other)     {
+    //    if (other.gameObject.CompareTag("Player")) ;
+    //    {
+    //        HasSpawned = true;
+    //    }
+    //}
 
-    }
 }
