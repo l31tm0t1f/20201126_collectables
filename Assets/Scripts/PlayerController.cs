@@ -23,8 +23,11 @@ public class PlayerController : MonoBehaviour
     private int ScoreCollected = 0;
     private int value;
     //public Text ScoreText;                // Winning announcement
-    public Text Text_Win;
-    public Text Text_Lost;
+    //public Text Text_Win;                 // pole vaja
+    //public Text Text_Lost;                // pole vaja
+
+    public GameObject ThePanel_Win;
+    public GameObject ThePanel_Lost;
 
     private void Start()
     {
@@ -32,10 +35,12 @@ public class PlayerController : MonoBehaviour
         //Text_Win.text = " ";
         //Text_Lost.text = " ";
 
-
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         coll = GetComponent<Collider2D>();
+
+        ThePanel_Win.SetActive(false);
+        ThePanel_Lost.SetActive(false);
     }
     private void Update()
     {
@@ -122,13 +127,14 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             if (ScoreCollected == ScoreScript.SummaScore)
             {
-                Text_Win.text = "You Won";
+                //Text_Win.text = "You Won";
+                ThePanel_Win.SetActive(true);
                 Time.timeScale = 0;                             // Will stop the game
-
             }
             else if (ScoreCollected >= ScoreScript.SummaScore)
             {
-                Text_Lost.text = "Try Again";
+                //Text_Lost.text = "Try Again";
+                ThePanel_Lost.SetActive(true);
                 Time.timeScale = 0;                             // Will stop the game
             }
         }
