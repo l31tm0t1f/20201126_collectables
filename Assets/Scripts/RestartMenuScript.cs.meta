@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Scripts/RestartMenu.cs.meta
+guid: 5f4d404bc03e558489e99cc933c14b8e
+=======
+guid: 945c56675980d2344952108655d8bbff
+>>>>>>> 84091b942f8d528f7aa0df6f8132c8190c9242c9:Assets/Scripts/RestartMenuScript.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

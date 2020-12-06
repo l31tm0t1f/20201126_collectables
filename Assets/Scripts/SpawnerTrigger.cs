@@ -11,6 +11,7 @@ public class SpawnerTrigger : MonoBehaviour
         if (HasSpawned = false && other.gameObject.CompareTag("Player")) ;      // also checks if Coins have spawned already
         {
             spawner.SpawnObject();
+<<<<<<< HEAD
             HasSpawned = true;                  // we want to set it true, to avoid further spawnings but this does not work as it should
         }
     }
@@ -21,5 +22,18 @@ public class SpawnerTrigger : MonoBehaviour
      //   }
 
 //    }
+=======
+            HasSpawned = true;  //doesn't work
+
+        }
+    }
+
+    //void OnTriggerExit(Collider2D other)     {
+    //    if (other.gameObject.CompareTag("Player")) ;
+    //    {
+    //        HasSpawned = true;
+    //    }
+    //}
+>>>>>>> 84091b942f8d528f7aa0df6f8132c8190c9242c9
 
 }
