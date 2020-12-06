@@ -5,31 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class RestartMenu : MonoBehaviour
 {
-
-
-    // Start is called before the first frame update
-    void Start()
+    public void Restart()           
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Restart()
-    {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SampleScene");  // will load SampleScene (which is 1st and only level in our game)
     }
     public void NextLevel()
     {
-        SceneManager.LoadScene("SampleScene");      
-        // right now only 1 Level, so this button directs back to level 1 again
+        SceneManager.LoadScene("SampleScene");  // will load SampleScene (which is 1st and only level in our game)  
+                                                // in future here will be reference to the next level
     }
     public void GoToMainMenu()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);              // Will load Main Menu (scene with build No of 1 in Build Settings)
     }
 }

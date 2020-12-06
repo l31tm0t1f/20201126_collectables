@@ -4,21 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour
-
 {
-    public static int SummaScore;
-    public Text score;
+    public static int SummaScore;            // int parameter also used in Spawner script
+    public Text score;                       // Score as text
 
-    // Start is called before the first frame update
-    void Start()
+    void Start()                             // Start is called before the first frame update
     {
-        score = GetComponent<Text>();
-        SummaScore = 0;
+        score = GetComponent<Text>();        // variable "score" will be attributed with the Text component 
+        SummaScore = 0;                      // SummaScore is 0 in the beginning
     }
 
-    // Update is called once per frame
-    void Update()
+    void Update()                            // Update is called once per frame
     {
-        score.text = SummaScore.ToString();
+        score.text = SummaScore.ToString();  // Text field will be attributed with SummaScore value which have been converted from int to string
     }
 }
