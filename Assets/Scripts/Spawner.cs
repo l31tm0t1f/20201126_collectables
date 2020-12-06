@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     public List<GameObject> objectToSpawn = new List<GameObject>();
     public int coinValue;               // Value of the COin
     public bool isRandomized;           // Random No
-    private List<int> coinValueList;    // List of spawn cCoin Values
+    public List<int> coinValueList;    // List of spawn cCoin Values
     private int rNumber;                // collected coin position in the coinValueList
     private int r1Number;               // collected coin position in the coinValueList + 1
     private int rValue;                 // COllected coin value

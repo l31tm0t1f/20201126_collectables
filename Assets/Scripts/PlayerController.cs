@@ -22,16 +22,15 @@ public class PlayerController : MonoBehaviour
     // [SerializeField] private float hurtForce = 10f;
     private int ScoreCollected = 0;
     private int value;
-    //public Text ScoreText;                // Winning announcement
-    public Text Text_Win;
-    public Text Text_Lost;
+    public GameObject ThePanel_Win;
+    public GameObject ThePanel_Lost;
 
     private void Start()
     {
         inventory = new List<string>();
-        //Text_Win.text = " ";
-        //Text_Lost.text = " ";
 
+        ThePanel_Win.SetActive(false);
+        ThePanel_Lost.SetActive(false);
 
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
@@ -122,13 +121,13 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             if (ScoreCollected == ScoreScript.SummaScore)
             {
-                Text_Win.text = "You Won";
+                ThePanel_Win.SetActive(true);
                 Time.timeScale = 0;                             // Will stop the game
 
             }
             else if (ScoreCollected >= ScoreScript.SummaScore)
             {
-                Text_Lost.text = "Try Again";
+                ThePanel_Lost.SetActive(true);
                 Time.timeScale = 0;                             // Will stop the game
             }
         }

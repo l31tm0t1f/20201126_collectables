@@ -5,24 +5,22 @@ using UnityEngine;
 public class SpawnerTrigger : MonoBehaviour
 {
     public Spawner spawner;
-    private bool HasSpawned = false;
+    public bool HasSpawned = false;
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
+    void OnTriggerEnter2D(Collider2D other) {
         if (HasSpawned = false && other.gameObject.CompareTag("Player")) ;
         {
             spawner.SpawnObject();
-            HasSpawned = true;
+            HasSpawned = true;                  // this does not work as it should be
 
         }
     }
-    void OnTriggerExit(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player")) ;
-        {
-            HasSpawned = true;
-        }
+    //void OnTriggerExit(Collider2D other) {      // this does not work as it should be
+    //    if (other.gameObject.CompareTag("Player")) ;
+     //   {
+     //       HasSpawned = true;
+     //   }
 
+//    }
 
-    }
 }
