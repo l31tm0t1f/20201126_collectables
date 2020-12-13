@@ -7,9 +7,17 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame()          // function related to Main Menu "Start Game" button
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+        SceneManager.LoadScene(1); 
                                     // will load scene which is next to the current scene in Build Settings
     }
+
+    public void Options()          // function related to Main Menu "Start Game" button
+    {
+        SceneManager.LoadScene(2);
+        // will load scene which is next to the current scene in Build Settings
+    }
+
+
 
     public void QuitGame()          // Quit game function
     {
