@@ -91438,7 +91438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2050289577}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -290.51575, y: -114.02884, z: -10}
+  m_LocalPosition: {x: -290.51575, y: -114.02884, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91457,13 +91457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 994f88c13a72d534f9352eb3aa557e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: {fileID: 1386779241}
-  timeOffset: 0
-  posOffset: {x: 5, y: 4}
-  leftLimit: -4.19
-  rightLimit: 100
-  bottomLimit: -14
-  topLimit: 0
 --- !u!81 &2050289580
 AudioListener:
   m_ObjectHideFlags: 0
@@ -95699,10 +95692,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2966011053876783568, guid: f341a9b0a794add4b9bde74bc4f84a37,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2966011053876783570, guid: f341a9b0a794add4b9bde74bc4f84a37,
         type: 3}
       propertyPath: Ground.m_Bits
-      value: 0
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 2966011053876783570, guid: f341a9b0a794add4b9bde74bc4f84a37,
         type: 3}
@@ -95732,12 +95730,12 @@ PrefabInstance:
     - target: {fileID: 2966011053876783581, guid: f341a9b0a794add4b9bde74bc4f84a37,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.3018887
+      value: -0.38568497
       objectReference: {fileID: 0}
     - target: {fileID: 2966011053876783581, guid: f341a9b0a794add4b9bde74bc4f84a37,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.19982
+      value: 1.3674126
       objectReference: {fileID: 0}
     - target: {fileID: 2966011053876783582, guid: f341a9b0a794add4b9bde74bc4f84a37,
         type: 3}

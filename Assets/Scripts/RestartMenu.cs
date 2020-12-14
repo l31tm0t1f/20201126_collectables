@@ -7,12 +7,16 @@ public class RestartMenu : MonoBehaviour
 {
     public void Restart()           
     {
+        //SceneManager.UnloadSceneAsync("SampleScene");
         SceneManager.LoadScene("SampleScene");  // will load SampleScene (which is 1st and only level in our game)
+        Time.timeScale = 1;
     }
     public void NextLevel()
     {
+        //SceneManager.UnloadSceneAsync("SampleScene");
         SceneManager.LoadScene("SampleScene");  // will load SampleScene (which is 1st and only level in our game)  
-                                                // in future here will be reference to the next level
+                                                     // in future here will be reference to the next level
+        Time.timeScale = 1;
     }
     public void GoToMainMenu()
     {

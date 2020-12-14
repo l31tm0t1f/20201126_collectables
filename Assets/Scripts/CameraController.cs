@@ -4,33 +4,25 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] GameObject Player;         // defines Player which is used to position camera
-    [SerializeField] float timeOffset;          // camera-related parameter
-    [SerializeField] Vector2 posOffset;         // is not used
-    [SerializeField] float leftLimit;           // camera-related parameter
-    [SerializeField] float rightLimit;          // camera-related parameter
-    [SerializeField] float bottomLimit;         // camera-related parameter
-    [SerializeField] float topLimit;            // camera-related parameter
-    private Vector3 velocity;                   // 
 
-    void Update()
+    private Transform playerTransform;
+
+
+    void Start()
+    {
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+
+
+    void LateUpdate()
     {
         Vector3 startPos = transform.position;      //camera current pos
-        Vector3 endPos = Player.transform.position; //Players current position
-        endPos.x += posOffset.x;
-        endPos.y += posOffset.y;
-        endPos.z = -10;
 
+        startPos.x = playerTransform.position.x; // camera x equal to player x
+        startPos.y = playerTransform.position.y+3; // camera y equal to player y
+        startPos.z = -10;                        // camera z equal to -10
 
-        //transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, -10);      // not used
+        transform.position = startPos;          // add offset value to thew temporary startPos
 
-        transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);        // Gradually changes a vector towards a desired destination (player location)
-
-        transform.position = new Vector3
-        (
-        Mathf.Clamp(transform.position.x, leftLimit, rightLimit),
-        Mathf.Clamp(transform.position.y, bottomLimit, topLimit),
-        transform.position.z
-    );
     }
 }
