@@ -21,5 +21,7 @@ public class RestartMenu : MonoBehaviour
     public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);              // Will load Main Menu (scene with build No of 1 in Build Settings)
+        Time.timeScale = 1;
+
     }
 }
