@@ -14,12 +14,5 @@ public class SpawnerTrigger : MonoBehaviour
             HasSpawned = true;                  // we want to set it true, to avoid further spawnings but this does not work as it should
         }
     }
-    //void OnTriggerExit(Collider2D other) {      // tryed this also, but not helping
-    //    if (other.gameObject.CompareTag("Player")) ;
-     //   {
-     //       HasSpawned = true;
-     //   }
-
-//    }
 
 }
