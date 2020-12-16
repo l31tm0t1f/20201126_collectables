@@ -8,7 +8,7 @@ public class SpawnerTrigger : MonoBehaviour
     public bool HasSpawned = false;             // has Coins spawned already (set to "false" at the start
 
     void OnTriggerEnter2D(Collider2D other) {   // When SpawnerTrigger object collides with object with "Player" tag
-        if (HasSpawned = false && other.gameObject.CompareTag("Player")) ;      // also checks if Coins have spawned already
+        if (HasSpawned == false && other.gameObject.CompareTag("Player"))      // also checks if Coins have spawned already
         {
             spawner.SpawnObject();
             HasSpawned = true;                  // we want to set it true, to avoid further spawnings but this does not work as it should
